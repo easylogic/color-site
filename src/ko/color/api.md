@@ -10,21 +10,21 @@ lineNumbers: false
 
 ```js
 // hex
-color.format({ r : 255, g : 255, b : 255 }, 'hex')  // #FFFFFF
+Color.format({ r : 255, g : 255, b : 255 }, 'hex')  // #FFFFFF
 =
-color.hex(255, 255, 255)
+Color.hex(255, 255, 255)
 
 // rgb
-color.format({ r : 255, g : 255, b : 255 }, 'rgb') // rgba(255, 255, 255, 0.5);
+Color.format({ r : 255, g : 255, b : 255 }, 'rgb') // rgba(255, 255, 255, 0.5);
 
 // rgba
-color.format({ r : 255, g : 255, b : 255, a : 0.5 }, 'rgb') // rgba(255, 255, 255, 0.5);
+Color.format({ r : 255, g : 255, b : 255, a : 0.5 }, 'rgb') // rgba(255, 255, 255, 0.5);
 
 // hsl 
-color.format({ h: 220, s: 10, l: 10}, 'hsl') // hsl(220, 10%, 10%)
+Color.format({ h: 220, s: 10, l: 10}, 'hsl') // hsl(220, 10%, 10%)
 
 // hsla 
-color.format({ h: 220, s: 10, l: 10, a: 0.5}, 'hsl') // hsla(220, 10%, 10%, 0.5)
+Color.format({ h: 220, s: 10, l: 10, a: 0.5}, 'hsl') // hsla(220, 10%, 10%, 0.5)
 
 ```
 
@@ -34,20 +34,25 @@ color.format({ h: 220, s: 10, l: 10, a: 0.5}, 'hsl') // hsla(220, 10%, 10%, 0.5)
 rgb, hex, hsl 형식의 문자열에서 컬러값을 구한다. 
 
 ```js
-color.parse("#FF0000") === { r : 255, g : 0, b : 0 }
+Color.parse("#FF0000") === { r : 255, g : 0, b : 0 }
 
-color.parse("rgb(255, 0, 0)") == { r : 255, g : 0, b :0 }
+Color.parse("rgb(255, 0, 0)") == { r : 255, g : 0, b :0 }
 
-color.parse("rgba(255, 0, 0, 0)") == { r : 255, g : 0, b :0, a: 0 }
+Color.parse("rgba(255, 0, 0, 0)") == { r : 255, g : 0, b :0, a: 0 }
 
-color.parse(0xff0000) == { r : 255, g : 0, b : 0 }
+Color.parse(0xff0000) == { r : 255, g : 0, b : 0 }
 
-color.parse(0xff000000) == { r : 255, g : 0, b : 0, a: 0 }
+Color.parse(0xff000000) == { r : 255, g : 0, b : 0, a: 0 }
 
-color.parse("hsl(255, 0%, 0%)") == { h : 255, s : 0, l :0 }
+Color.parse("hsl(255, 0%, 0%)") == { h : 255, s : 0, l :0 }
 
-color.parse("hsla(255, 0%, 0%, 0)") == { h : 255, s : 0, l :0, a: 0 }
+Color.parse("hsla(255, 0%, 0%, 0)") == { h : 255, s : 0, l :0, a: 0 }
 ```
+
+
+<ClientOnly>
+<color-parse :text="'red'" />
+</ClientOnly>
 
 
 ## Color 멀티 파서 
@@ -58,77 +63,22 @@ color.parse("hsla(255, 0%, 0%, 0)") == { h : 255, s : 0, l :0, a: 0 }
 Color.matches(str) 
 ```
 
-실제 결과물을 보자. 
-
-```js
-
-console.log(Color.matches(' rgba(255, 0, 0, 1) thanks to hsl(100, 20%, 20%) and yellow '))
-
-=>
-
-[
-    {
-        "color": "rgba(255, 0, 0, 1)",
-        "startIndex": 1,
-        "endIndex": 19
-    },
-    {
-        "color": "hsl(100, 20%, 20%)",
-        "startIndex": 30,
-        "endIndex": 48
-    },
-    {
-        "color": "yellow",
-        "nameColor": "rgb(255, 255, 0)",
-        "startIndex": 53,
-        "endIndex": 59
-    }
-]
-
-```
+<ClientOnly>
+<color-multi-parse-1 :text="'rgba(255, 0, 0, 1) thanks to hsl(100, 20%, 20%) and yellow'" />
+</ClientOnly>
 
 ### 멀티 파서 2 
 
-```js
-console.log(Color.convertMatches(' rgba(255, 0, 0, 1) thanks to hsl(100, 20%, 20%) and yellow ', ','))
-
-=> 
-
-{
-    str: ' @0 thanks to @1 and @2 ',
-    matches : [
-        {
-            "color": "rgba(255, 0, 0, 1)",
-            "startIndex": 1,
-            "endIndex": 19
-        },
-        {
-            "color": "hsl(100, 20%, 20%)",
-            "startIndex": 30,
-            "endIndex": 48
-        },
-        {
-            "color": "yellow",
-            "nameColor": "rgb(255, 255, 0)",
-            "startIndex": 53,
-            "endIndex": 59
-        }
-    ]
-}
-```
+<ClientOnly>
+<color-multi-parse-2 :text="'rgba(255, 0, 0, 1) thanks to hsl(100, 20%, 20%) and yellow'" />
+</ClientOnly>
 
 ### 멀티파서 2 복구하기 
 
 
-```js
-const ret = Color.convertMatches(' rgba(255, 0, 0, 1) thanks to hsl(100, 20%, 20%) and yellow ', ','))
-
-console.log(Color.reverseMatches (ret.str, ret.matches))
-
-=> 
-
-' rgba(255, 0, 0, 1) thanks to hsl(100, 20%, 20%) and yellow '
-```
+<ClientOnly>
+<color-multi-parse-2-reverseMatches :text="'rgba(255, 0, 0, 1) thanks to hsl(100, 20%, 20%) and yellow'" />
+</ClientOnly>
 
 ## Color 변환 
 

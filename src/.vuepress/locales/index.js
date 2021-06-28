@@ -1,12 +1,12 @@
 module.exports = {
     '/': {
         lang: 'en-US',
-        title: 'Color Picker & Gradient',
-        description: 'easylogic color picker used anywhere.'
+        title: 'Color with easylogic',
+        description: 'color manipulation library'
     },
     '/ko/': {
         lang: 'ko-KR',
-        title: 'Color Picker 와 Gradient',
-        description: '어디서든 쓸 수 있는 간단한 컬러피커를 알아봅시다.'
+        title: 'Color with easylogic',
+        description: '다양한 색 변환 함수를 만나보아요.'
     }
 }

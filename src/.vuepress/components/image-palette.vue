@@ -22,7 +22,7 @@
 
 <script>
 
-import { Color } from 'codemirror-colorpicker'
+import Color from '@easylogic/color'
 
 export default {
     props: ['title', 'description', 'count'], 

@@ -10,13 +10,13 @@ npm run build
 cd docs/
 
 # if you are deploying to a custom domain
-echo 'colorpicker.easylogic.studio' > CNAME
+echo 'color.easylogic.studio' > CNAME
 
 git init
 git add -A
 git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f https://github.com/easylogic/codemirror-colorpicker.git master:gh-pages
+git push -f https://github.com/easylogic/color.git main:gh-pages
 
 cd -

@@ -1,5 +1,5 @@
 {
-  "name": "codemirror-colorpicker-site",
+  "name": "color-site",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,9 +17,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@easylogic/colorpicker": "^1.10.3",
+    "@easylogic/color": "0.0.5",
     "axios": "^0.21.1",
-    "codemirror-colorpicker": "github:easylogic/codemirror-colorpicker",
     "vue-codemirror-lite": "^1.0.4",
     "vuepress-plugin-google-tag-manager": "0.0.3"
   },

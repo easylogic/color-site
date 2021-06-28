@@ -4,104 +4,92 @@ module.exports = {
         label: 'English',
         nav: [
             {
-                text: 'Web Design Tool',
-                link: 'https://editor.easylogic.studio'
+                text: 'Editors',
+                items: [
+                    {
+                        text: 'Web Design Tool',
+                        link: 'https://editor.easylogic.studio'
+                    },
+                    {
+                        text: 'Gradient Editor',
+                        link: 'https://gradient.easylogic.studio'
+                    }
+                ]
             },
             {
-                text: 'Gradient Editor',
-                link: 'https://gradient.easylogic.studio'
-            },            
-            {
-            text: 'Story',
-            items: [{
-                    text: '1. ColorPicker',
-                    link: '/colorpicker/'
-                },{
-                    text: '2. GradientPicker',
-                    link: '/gradientpicker/'
-                },
-                {
-                    text: '3. Color',
-                    link: '/color/'
-                },
-                {
-                    text: '4. Image',
-                    link: '/image/'
-                }
-            ]
-        }],
+                text: 'Story',
+                items: [
+                    {
+                        text: '1. Color',
+                        link: '/color/'
+                    },
+                    {
+                        text: '2. ColorPicker',
+                        link: 'https://colorpicker.easylogic.studio/'
+                    }, {
+                        text: '3. GradientPicker',
+                        link: 'https://gradientpicker.easylogic.studio/'
+                    },
+                    {
+                        text: '4. Image Filter',
+                        link: 'https://image-filter.easylogic.studio/'
+                    }
+                ]
+            }],
         // sidebar: 'auto'
         sidebar: {
-            '/colorpicker/': [
-                '',
-                'api'
-            ],
-            '/gradientpicker/': [
-                '',
-                'api'
-            ],
             '/color/': [
                 '',
                 'api'
             ],
-            '/image/': [
-                '',
-                'api'
-            ],            
             '/': [
-                ''
+                '',
             ]
         }
     },
     '/ko/': {
         selectText: '언어 선택',
-        label: '한국어', 
+        label: '한국어',
         nav: [
             {
-                text: 'Web Design Tool',
-                link: 'https://editor.easylogic.studio'
+                text: 'Editors',
+                items: [
+                    {
+                        text: 'Web Design Tool',
+                        link: 'https://editor.easylogic.studio'
+                    },
+                    {
+                        text: 'Gradient Editor',
+                        link: 'https://gradient.easylogic.studio'
+                    }
+                ]
             },
             {
-                text: 'Gradient Editor',
-                link: 'https://gradient.easylogic.studio'
-            },            
-            {
                 text: '이야기',
-                items: [{
-                    text: '1. ColorPicker',
-                    link: '/ko/colorpicker/'
-                },{
-                    text: '2. GradientPicker',
-                    link: '/ko/gradientpicker/'
-                },
-                {
-                    text: '3. Color',
-                    link: '/ko/color/'
-                },
-                {
-                    text: '4. Image',
-                    link: '/ko/image/'
-                }
-            ]
-        }],
+                items: [
+                    {
+                        text: '1. Color',
+                        link: '/ko/'
+                    },
+                    {
+                        text: '2. ColorPicker',
+                        link: 'https://colorpicker.easylogic.studio/'
+                    }, {
+                        text: '3. GradientPicker',
+                        link: 'https://gradientpicker.easylogic.studio/'
+                    },
+                    {
+                        text: '4. Image Filter',
+                        link: 'https://image-filter.easylogic.studio/'
+                    }
+                ]
+            }],
         // sidebar: 'auto'
         sidebar: {
-            '/ko/colorpicker/': [
-                '',
-                'api'
-            ],
-            '/ko/gradientpicker/': [
-                '',
-                'api'
-            ],
             '/ko/color/': [
                 '',
                 'api'
             ],
-            '/ko/image/': [
-                '',
-                'api'
-            ],            
             '/ko/': [
                 ''
             ]
