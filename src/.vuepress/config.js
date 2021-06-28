@@ -6,8 +6,8 @@ module.exports = {
   base: "/",
   dest: "./docs",
   ga: "UA-116150958-1",
-  title: "ColorPicker",
-  description: "Simple ColorPicker used anywhere ",
+  title: "Color with easylogic",
+  description: "Simple Color manipulation functions ",
   head: [
     ["link", { rel: "shortcut icon", href: "/images/favicon.ico" }],
     ["link", { rel: "icon", href: "/images/logo.png" }],
@@ -61,7 +61,7 @@ module.exports = {
   },
   locales,
   themeConfig: {
-    repo: "easylogic/codemirror-colorpicker",
+    repo: "easylogic/color",
     // repoLabel: 'Contribute!',
     lastUpdated: "Last Updated",
     locales: themeLocales,
